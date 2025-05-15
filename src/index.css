@@ -1,5 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&family=Playfair+Display:wght@400;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -9,32 +8,32 @@
   :root {
     --background: 72 33% 97%;
     --foreground: 141 16% 16%;
-    
+
     --card: 0 0% 100%;
     --card-foreground: 141 16% 16%;
-    
+
     --popover: 0 0% 100%;
     --popover-foreground: 141 16% 16%;
-    
+
     --primary: 140 35% 27%;
     --primary-foreground: 0 0% 100%;
-    
+
     --secondary: 84 34% 52%;
     --secondary-foreground: 0 0% 100%;
-    
+
     --muted: 72 18% 90%;
     --muted-foreground: 141 4% 40%;
-    
+
     --accent: 32 18% 36%;
     --accent-foreground: 0 0% 100%;
-    
+
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-    
+
     --border: 84 18% 85%;
     --input: 84 18% 85%;
     --ring: 140 35% 27%;
-    
+
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
@@ -46,36 +45,36 @@
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
-  
+
   .dark {
     --background: 141 16% 10%;
     --foreground: 72 33% 97%;
-    
+
     --card: 141 14% 13%;
     --card-foreground: 72 33% 97%;
-    
+
     --popover: 141 14% 13%;
     --popover-foreground: 72 33% 97%;
-    
+
     --primary: 140 28% 36%;
     --primary-foreground: 0 0% 100%;
-    
+
     --secondary: 84 28% 44%;
     --secondary-foreground: 0 0% 100%;
-    
+
     --muted: 141 6% 18%;
     --muted-foreground: 72 10% 80%;
-    
+
     --accent: 32 15% 28%;
     --accent-foreground: 0 0% 100%;
-    
+
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-    
+
     --border: 141 10% 20%;
     --input: 141 10% 20%;
     --ring: 140 28% 36%;
-    
+
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -91,36 +90,53 @@
   * {
     @apply border-border;
   }
-  
+
   body {
     @apply bg-background text-foreground font-roboto;
   }
-  
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-montserrat font-semibold;
   }
-  
+
   .hero-section {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url('https://images.unsplash.com/photo-1558904541-efa843a96f01?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80');
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)),
+      url("https://images.unsplash.com/photo-1558904541-efa843a96f01?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80");
     background-size: cover;
     background-position: center;
   }
-  
+
   .animate-fade-in {
     animation: fadeIn 0.8s ease-in-out;
   }
-  
+
   .animate-slide-up {
     animation: slideUp 0.8s ease-in-out;
   }
-  
+
   @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
-  
+
   @keyframes slideUp {
-    from { transform: translateY(20px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
 }

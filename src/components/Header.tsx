@@ -26,15 +26,22 @@ const Header = () => {
       <div className="container mx-auto px-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <div
-            className={`transition-all duration-300 ${isScrolled ? "scale-100" : "scale-125"}`}
+            className={`p-2 rounded-full bg-primary/10 transition-all duration-300 ${isScrolled ? "scale-100" : "scale-125"}`}
           >
-            <Icon name="Leaf" className="h-9 w-9 text-primary drop-shadow-md" />
+            <Icon name="TreePine" className="h-8 w-8 text-primary" />
           </div>
-          <span
-            className={`font-montserrat font-bold transition-all duration-300 ${isScrolled ? "text-xl md:text-2xl" : "text-2xl md:text-3xl"} text-primary drop-shadow-md`}
-          >
-            Природные решения
-          </span>
+          <div className="flex flex-col">
+            <span
+              className={`font-playfair font-bold transition-all duration-300 ${isScrolled ? "text-xl md:text-2xl" : "text-2xl md:text-3xl"} text-primary leading-tight`}
+            >
+              Природные
+            </span>
+            <span
+              className={`font-playfair font-bold transition-all duration-300 ${isScrolled ? "text-xl md:text-2xl" : "text-2xl md:text-3xl"} bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent leading-tight`}
+            >
+              решения
+            </span>
+          </div>
         </div>
 
         {/* Навигация для десктопа */}
@@ -76,6 +83,7 @@ const Header = () => {
           </SheetTrigger>
           <SheetContent>
             <nav className="flex flex-col mt-10 gap-4">
+              {/* ... keep existing code below */}
               <a
                 href="#services"
                 className="px-4 py-2 hover:bg-muted rounded-md font-medium"
