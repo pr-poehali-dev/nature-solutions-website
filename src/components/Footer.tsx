@@ -9,14 +9,14 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-2 rounded-full bg-white/10">
-                <Icon name="TreePine" className="h-7 w-7" />
+              <div className="p-2 rounded-full bg-gradient-to-br from-white/20 to-secondary/30">
+                <Icon name="Flower2" className="h-7 w-7" />
               </div>
               <div className="flex flex-col">
-                <span className="font-playfair font-bold text-xl leading-tight">
+                <span className="font-cormorant font-bold text-xl tracking-wide uppercase leading-tight">
                   Природные
                 </span>
-                <span className="font-playfair font-bold text-xl text-secondary leading-tight">
+                <span className="font-cormorant font-bold text-xl tracking-wide uppercase text-secondary/90 leading-tight">
                   решения
                 </span>
               </div>

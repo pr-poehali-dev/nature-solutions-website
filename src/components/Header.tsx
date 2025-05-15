@@ -26,18 +26,21 @@ const Header = () => {
       <div className="container mx-auto px-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <div
-            className={`p-2 rounded-full bg-primary/10 transition-all duration-300 ${isScrolled ? "scale-100" : "scale-125"}`}
+            className={`relative transition-all duration-300 ${isScrolled ? "scale-100" : "scale-125"}`}
           >
-            <Icon name="TreePine" className="h-8 w-8 text-primary" />
+            <div className="absolute inset-0 bg-secondary/20 rounded-full blur-xl"></div>
+            <div className="relative p-2.5 rounded-full bg-gradient-to-br from-primary to-secondary">
+              <Icon name="Flower2" className="h-7 w-7 text-white" />
+            </div>
           </div>
           <div className="flex flex-col">
             <span
-              className={`font-playfair font-bold transition-all duration-300 ${isScrolled ? "text-xl md:text-2xl" : "text-2xl md:text-3xl"} text-primary leading-tight`}
+              className={`font-cormorant font-bold transition-all duration-300 tracking-wide uppercase ${isScrolled ? "text-xl md:text-2xl" : "text-2xl md:text-3xl"} text-primary leading-tight`}
             >
               Природные
             </span>
             <span
-              className={`font-playfair font-bold transition-all duration-300 ${isScrolled ? "text-xl md:text-2xl" : "text-2xl md:text-3xl"} bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent leading-tight`}
+              className={`font-cormorant font-bold transition-all duration-300 tracking-wide uppercase ${isScrolled ? "text-xl md:text-2xl" : "text-2xl md:text-3xl"} text-secondary leading-tight`}
             >
               решения
             </span>

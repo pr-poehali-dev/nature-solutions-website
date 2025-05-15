@@ -47,7 +47,7 @@ const config: Config = {
       fontFamily: {
         montserrat: ["Montserrat", "sans-serif"],
         roboto: ["Roboto", "sans-serif"],
-        playfair: ["Playfair Display", "serif"],
+        cormorant: ["Cormorant Garamond", "serif"],
       },
       keyframes: {
         "accordion-down": {
