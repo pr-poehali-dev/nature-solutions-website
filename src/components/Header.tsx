@@ -1,8 +1,7 @@
-
-import * as React from 'react';
-import Icon from '@/components/ui/icon';
-import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import * as React from "react";
+import Icon from "@/components/ui/icon";
+import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = React.useState(false);
@@ -16,32 +15,52 @@ const Header = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-background/95 backdrop-blur-sm shadow-md py-2' : 'bg-transparent py-4'}`}>
+    <header
+      className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? "bg-background/95 backdrop-blur-sm shadow-md py-2" : "bg-transparent py-6"}`}
+    >
       <div className="container mx-auto px-4 flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <Icon name="Leaf" className="h-7 w-7 text-primary" />
-          <span className="font-montserrat font-bold text-lg md:text-xl text-primary">
+        <div className="flex items-center gap-3">
+          <div
+            className={`transition-all duration-300 ${isScrolled ? "scale-100" : "scale-125"}`}
+          >
+            <Icon name="Leaf" className="h-9 w-9 text-primary drop-shadow-md" />
+          </div>
+          <span
+            className={`font-montserrat font-bold transition-all duration-300 ${isScrolled ? "text-xl md:text-2xl" : "text-2xl md:text-3xl"} text-primary drop-shadow-md`}
+          >
             Природные решения
           </span>
         </div>
 
         {/* Навигация для десктопа */}
         <nav className="hidden md:flex items-center gap-6">
-          <a href="#services" className="font-medium hover:text-primary transition-colors">
+          <a
+            href="#services"
+            className="font-medium hover:text-primary transition-colors"
+          >
             Услуги
           </a>
-          <a href="#about" className="font-medium hover:text-primary transition-colors">
+          <a
+            href="#about"
+            className="font-medium hover:text-primary transition-colors"
+          >
             О нас
           </a>
-          <a href="#projects" className="font-medium hover:text-primary transition-colors">
+          <a
+            href="#projects"
+            className="font-medium hover:text-primary transition-colors"
+          >
             Проекты
           </a>
-          <a href="#contact" className="font-medium hover:text-primary transition-colors">
+          <a
+            href="#contact"
+            className="font-medium hover:text-primary transition-colors"
+          >
             Контакты
           </a>
           <Button>Связаться с нами</Button>
@@ -57,16 +76,28 @@ const Header = () => {
           </SheetTrigger>
           <SheetContent>
             <nav className="flex flex-col mt-10 gap-4">
-              <a href="#services" className="px-4 py-2 hover:bg-muted rounded-md font-medium">
+              <a
+                href="#services"
+                className="px-4 py-2 hover:bg-muted rounded-md font-medium"
+              >
                 Услуги
               </a>
-              <a href="#about" className="px-4 py-2 hover:bg-muted rounded-md font-medium">
+              <a
+                href="#about"
+                className="px-4 py-2 hover:bg-muted rounded-md font-medium"
+              >
                 О нас
               </a>
-              <a href="#projects" className="px-4 py-2 hover:bg-muted rounded-md font-medium">
+              <a
+                href="#projects"
+                className="px-4 py-2 hover:bg-muted rounded-md font-medium"
+              >
                 Проекты
               </a>
-              <a href="#contact" className="px-4 py-2 hover:bg-muted rounded-md font-medium">
+              <a
+                href="#contact"
+                className="px-4 py-2 hover:bg-muted rounded-md font-medium"
+              >
                 Контакты
               </a>
               <Button className="mt-2">Связаться с нами</Button>
